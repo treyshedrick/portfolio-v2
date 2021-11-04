@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 const PageContainer = styled.div`
-    width: 100%;
-    height: 100%;
+    background-color: ${props => props.theme.primary};
+    width: 50%;
+    display: flex;
+    flex-direction: row;
 `;
 
 export default PageContainer;
