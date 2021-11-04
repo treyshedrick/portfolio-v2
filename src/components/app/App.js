@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Routes from "./Routes";
+import ThemeProvider from "./ThemeProvider";
 
 const AppContainer = styled.div`
   height: 100vh;
@@ -10,7 +11,11 @@ const AppContainer = styled.div`
 
 function App() {
     return (
-        <AppContainer><Routes /></AppContainer>
+        <ThemeProvider>
+            <AppContainer>
+                <Routes />
+            </AppContainer>
+        </ThemeProvider>
     );
 }
 
