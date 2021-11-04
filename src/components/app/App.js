@@ -9,9 +9,9 @@ const AppContainer = styled.div`
 `;
 
 function App() {
-	return (
-		<AppContainer><Routes /></AppContainer>
-	);
+    return (
+        <AppContainer><Routes /></AppContainer>
+    );
 }
 
 export default App;
