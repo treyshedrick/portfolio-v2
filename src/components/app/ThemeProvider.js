@@ -1,5 +1,6 @@
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import React, { useState } from "react";
+import React from "react";
+import { useColorScheme } from 'use-color-scheme';
 
 const theme = {
     main: "#415A77",
@@ -20,11 +21,8 @@ const darkTheme = {
 };
 
 const ThemeProvider = ({children}) => {
-    const [isDark, setIsDark] = useState(false);
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-        setIsDark(e.matches ? true : false);
-    });
+    const { scheme } = useColorScheme();
+    const isDark = scheme === "dark";
 
     return (
         <StyledThemeProvider theme={isDark ? darkTheme : theme}>
