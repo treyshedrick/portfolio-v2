@@ -6,7 +6,7 @@ export const ROUTES = {
 };
 
 export const SCREEN_SIZE = {
-    SMALL: "(max-width: 700px)"
+    SMALL: "(max-width: 800px)"
 };
 
 export const LINKS = {
