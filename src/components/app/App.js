@@ -3,9 +3,8 @@ import styled from "styled-components";
 import Routes from "./Routes";
 import ThemeProvider from "./ThemeProvider";
 import UserInfo from "../shared/UserInfo";
-import { useMediaQuery } from 'react-responsive';
-import { SCREEN_SIZE } from "./constants";
 import { motion } from "framer-motion";
+import { useIsSmallScreen } from "./hooks";
 
 const AppContainer = styled(motion.div)`
   height: 100vh;
@@ -32,7 +31,7 @@ const container = {
 
 
 function App() {
-    const isSmallScreen = useMediaQuery({ query: SCREEN_SIZE.SMALL });
+    const isSmallScreen = useIsSmallScreen();
 
     return (
         <ThemeProvider>

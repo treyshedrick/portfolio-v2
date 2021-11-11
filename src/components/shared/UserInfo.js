@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { useMediaQuery } from 'react-responsive';
-import { SCREEN_SIZE } from "../app/constants";
 import { motion } from "framer-motion";
 import SelfIcon from "../../assets/self-icon.png";
+import { useIsSmallScreen } from "../app/hooks";
 
 const Section = styled(motion.div)`
     display: flex;
@@ -44,7 +43,7 @@ const Column = styled.div`
 `;
 
 const UserInfo = () => {
-    const isSmallScreen = useMediaQuery({ query: SCREEN_SIZE.SMALL });
+    const isSmallScreen = useIsSmallScreen();
 
     return (
         <Section

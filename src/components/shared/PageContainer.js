@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { useMediaQuery } from 'react-responsive';
-import { SCREEN_SIZE } from "../app/constants";
 import { motion } from "framer-motion";
+import { useIsSmallScreen } from "../app/hooks";
 
 const Container = styled(motion.div)`
     background-color: ${props => props.theme.main}75;
@@ -18,7 +17,7 @@ const Container = styled(motion.div)`
 `;
 
 const PageContainer = ({children}) => {
-    const isSmallScreen = useMediaQuery({ query: SCREEN_SIZE.SMALL });
+    const isSmallScreen = useIsSmallScreen();
 
     return(
         <Container
