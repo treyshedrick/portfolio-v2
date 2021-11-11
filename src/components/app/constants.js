@@ -1,3 +1,10 @@
+export const ROUTES = {
+    HOME: "/",
+    SKILLS: "/skills",
+    PROJECTS: "/projects",
+    CONTACT: "/contact"
+};
+
 export const SCREEN_SIZE = {
     SMALL: "(max-width: 700px)"
 };

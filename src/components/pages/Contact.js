@@ -1,9 +1,11 @@
 import React from "react";
-import PageContainer from "../shared/PageContainer";
+import Page from "../shared/Page";
 
 const Contact = () => {
-    return(
-        <PageContainer>Contact</PageContainer>
+    return (
+        <Page>
+            Contact
+        </Page>
     );
 };
 

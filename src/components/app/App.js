@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Routes from "./Routes";
 import ThemeProvider from "./ThemeProvider";
 import UserInfo from "../shared/UserInfo";
 import { motion } from "framer-motion";
 import { useIsSmallScreen } from "./hooks";
+import PageContainer from "../shared/PageContainer";
 
 const AppContainer = styled(motion.div)`
   height: 100vh;
@@ -43,7 +43,7 @@ function App() {
                 isSmall={isSmallScreen} 
             >
                 <UserInfo />
-                <Routes />
+                <PageContainer />
             </AppContainer>
         </ThemeProvider>
     );

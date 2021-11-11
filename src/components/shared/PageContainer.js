@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useIsSmallScreen } from "../app/hooks";
+import Routes from "../app/Routes";
 
 const Container = styled(motion.div)`
+    font-family: ${props => props.theme.fontFamily};
     background-color: ${props => props.theme.main}40;
     border: 2px solid ${props => props.theme.inversePrimary};
     color: ${props => props.theme.inversePrimary};
@@ -16,6 +18,7 @@ const Container = styled(motion.div)`
     margin-top: ${props => props.isSmall ? "5px" : null};
 `;
 
+
 const PageContainer = ({children}) => {
     const isSmallScreen = useIsSmallScreen();
 
@@ -26,7 +29,7 @@ const PageContainer = ({children}) => {
             transition={{duration: 1}}
             isSmall={isSmallScreen}
         >
-            {children}
+            <Routes />
         </Container>
     );
 };

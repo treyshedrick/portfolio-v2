@@ -24,7 +24,7 @@ const ContactButton = ({icon, text, src }) => {
     const customAlign = text === LABELS.LINKEDIN;
 
     return (
-        <StyledAnchor href={src} target={text !== LABELS.EMAIL && "_blank"}>
+        <StyledAnchor href={src} target={text !== LABELS.EMAIL ? "_blank" : ""}>
             {icon}
             <Text customAlign={customAlign}>{text}</Text>
         </StyledAnchor>
