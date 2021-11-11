@@ -7,3 +7,9 @@ export const LINKS = {
     GITHUB: "https://github.com/treyshedrick",
     EMAIL: "mailto:treyshedrick@gmail.com"
 };
+
+export const LABELS = {
+    LINKEDIN: "LinkedIn",
+    GITHUB: "GitHub",
+    EMAIL: "Email"
+};

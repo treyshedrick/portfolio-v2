@@ -7,8 +7,8 @@ const sharedThemeStyles = {
     fontSize: {
         sm: "12px",
         md: "14px",
-        lg: "20px",
-        xl: "24px"
+        lg: "18px",
+        xl: "28px"
     }
 };
 
