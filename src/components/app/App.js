@@ -5,8 +5,9 @@ import ThemeProvider from "./ThemeProvider";
 import UserInfo from "../shared/UserInfo";
 import { useMediaQuery } from 'react-responsive';
 import { SCREEN_SIZE } from "./constants";
+import { motion } from "framer-motion";
 
-const AppContainer = styled.div`
+const AppContainer = styled(motion.div)`
   height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom right, 
@@ -16,7 +17,18 @@ const AppContainer = styled.div`
   flex-direction: ${props => props.isSmall ? "column" : "row"};
   padding: ${props => props.isSmall ? "20px" : "10%"};
   justify-content: center;
+  overflow-y: hidden;
 `;
+
+const container = {
+    hidden: { opacity: .5 },
+    show: {
+        opacity: 1,
+        transition: {
+            delayChildren: 100
+        }
+    }
+};
 
 
 function App() {
@@ -24,7 +36,12 @@ function App() {
 
     return (
         <ThemeProvider>
-            <AppContainer isSmall={isSmallScreen}>
+            <AppContainer
+                variants={container}
+                initial="hidden"
+                animate="show"
+                isSmall={isSmallScreen} 
+            >
                 <UserInfo />
                 <Routes />
             </AppContainer>
