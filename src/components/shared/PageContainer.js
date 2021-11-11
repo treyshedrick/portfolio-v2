@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 const Container = styled(motion.div)`
     background-color: ${props => props.theme.main}75;
     border: 2px solid ${props => props.theme.inversePrimary};
+    color: ${props => props.theme.inversePrimary};
     width: 100%;
     max-width: 1000px;
     display: flex;
