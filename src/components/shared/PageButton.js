@@ -5,6 +5,15 @@ import { Link } from "react-router-dom";
 const Button = styled.button`
     height: 100%;
     width: 100%;
+    background-color: ${props => props.theme.main}90;
+    color: ${props => props.theme.inversePrimary};
+    border: 0;  
+    border-radius: 0;
+    font-family: ${props => props.theme.fontFamily};
+    &:hover {
+        opacity: .5;
+        cursor: pointer;
+    }
 `;
 
 const StyledLink = styled(Link)`

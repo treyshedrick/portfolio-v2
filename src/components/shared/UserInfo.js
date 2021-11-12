@@ -34,7 +34,7 @@ const Name = styled.div`
 
 const Header = styled.div`
     font-size: ${props => props.theme.fontSize.md};
-    margin: ${props => props.isSmall ? "px": "10px"};
+    margin: ${props => props.isSmall ? "0px": "10px"};
     text-align: center;
 `;
 

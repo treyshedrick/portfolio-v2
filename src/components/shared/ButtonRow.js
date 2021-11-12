@@ -7,6 +7,7 @@ const Row = styled.div`
     flex-direction: row !important;
     height: 50px;
     width: 100%;
+    border-bottom: 2px solid ${props => props.theme.inversePrimary};
 `;
 
 const ButtonRow = () => {

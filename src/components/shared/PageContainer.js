@@ -10,7 +10,7 @@ const Container = styled(motion.div)`
     color: ${props => props.theme.inversePrimary};
     width: 100%;
     max-width: 1000px;
-    height: ${props => props.isSmall ? "100%" : "700px"};
+    height: ${props => props.isSmall ? "calc(100% - 165px);" : "700px"};
     display: flex;
     flex-direction: row;
     border-radius: 5px;
