@@ -11,6 +11,7 @@ const Section = styled(motion.div)`
     display: flex;
     flex-direction: ${props => props.isSmall && "row !important"};
     align-items: center;
+    justify-content: ${props => props.isSmall && "center"};
     width: 100%;
     max-width: ${props => props.isSmall ? "100%" : "300px"};
     height: ${props => props.isSmall ? "150px" : "700px"};
