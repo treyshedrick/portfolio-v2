@@ -14,7 +14,7 @@ const Section = styled(motion.div)`
     justify-content: ${props => props.isSmall && "center"};
     width: 100%;
     max-width: ${props => props.isSmall ? "100%" : "300px"};
-    height: ${props => props.isSmall ? "150px" : "700px"};
+    height: ${props => props.isSmall ? "150px" : "90%"};
     display: flex;
     flex-direction: column;
     border: 2px solid ${props => props.theme.inversePrimary};
@@ -25,7 +25,8 @@ const Section = styled(motion.div)`
     padding: 2px;
     ${({ isSmall }) => !isSmall && `
         padding-top: 50px;
-  `}
+    `}
+    overflow-x: auto;
 `;
 
 const Name = styled.div`
