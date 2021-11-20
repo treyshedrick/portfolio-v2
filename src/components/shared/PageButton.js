@@ -5,13 +5,15 @@ import { Link } from "react-router-dom";
 const Button = styled.button`
     height: 100%;
     width: 100%;
-    background-color: ${props => props.theme.main}90;
+    background-color: ${props => props.theme.secondary}90;
     color: ${props => props.theme.inversePrimary};
     border: 0;  
     border-radius: 0;
     font-family: ${props => props.theme.fontFamily};
     &:hover {
         opacity: .5;
+        background-color: ${props => props.theme.inversePrimary}90;
+        color: ${props => props.theme.primary};
         cursor: pointer;
     }
 `;

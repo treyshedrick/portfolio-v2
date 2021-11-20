@@ -10,7 +10,7 @@ const AppContainer = styled(motion.div)`
   height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom right, 
-    ${props => props.theme.main},
+    ${props => props.theme.secondary},
     ${props => props.theme.primary});
   display: flex;
   flex-direction: ${props => props.isSmall ? "column" : "row"};

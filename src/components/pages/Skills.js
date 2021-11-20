@@ -13,7 +13,7 @@ const Row = styled.div`
 const Header = styled.div`
     font-size: ${props => props.theme.fontSize.lg};
     margin: ${props => props.isSmall ? "0px": "10px"};
-    border-bottom: 1px solid white;
+    border-bottom: ${props => `1.5px solid ${props.theme.fontColor}`};
 `;
 
 const SkillSetBlock = styled.div`
