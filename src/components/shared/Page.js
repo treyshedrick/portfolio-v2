@@ -13,6 +13,8 @@ const RouteContainer = styled.div`
 
 
 const RoutePage = styled(motion.div)`
+    height: 100%;
+    width: 100%;
     overflow-x: auto;
 `;
 
