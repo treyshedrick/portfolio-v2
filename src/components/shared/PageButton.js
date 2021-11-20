@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-  
+
 const Button = styled.button`
     height: 100%;
     width: 100%;
@@ -16,11 +16,23 @@ const Button = styled.button`
     }
 `;
 
+const StyledAnchor = styled.a`
+    width: 100%;
+`;
+
 const StyledLink = styled(Link)`
     width: 100%;
 `;
 
-const PageButton = ({children, route}) => {
+const PageButton = ({children, route, isDocument, link}) => {
+
+    if(isDocument){
+        return (
+            <StyledAnchor href={link} target="_blank">
+                <Button>{children}</Button>
+            </StyledAnchor>
+        );
+    }
     return (
         <StyledLink to={route}>
             <Button>{children}</Button>

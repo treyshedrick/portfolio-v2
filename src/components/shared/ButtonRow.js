@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import PageButton from "./PageButton";
 import { ROUTES } from "../app/constants";
+import Resume from "../../assets/Resume.pdf";
 
 const Row = styled.div`
     display: flex;
@@ -16,7 +17,7 @@ const ButtonRow = () => {
             <PageButton route={ROUTES.HOME}>About Me</PageButton>
             <PageButton route={ROUTES.PROJECTS}>Projects</PageButton>
             <PageButton route={ROUTES.SKILLS}>Skills</PageButton>
-            <PageButton route={ROUTES.CONTACT}>Contact</PageButton>
+            <PageButton isDocument link={Resume}>Resume</PageButton>
         </Row>
     );
 };
