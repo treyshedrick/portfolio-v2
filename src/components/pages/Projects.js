@@ -35,7 +35,7 @@ const Projects = () => {
             </HeaderBlock>
             <OrchestrationContainer>
                 <Row>
-                    <ProjectCard image={ColorGameImage} name="Color Game" />
+                    <ProjectCard image={ColorGameImage} name="Color Game" description="testing to see if this works" />
                     <ProjectCard image={ColorGameImage} />
                     <ProjectCard image={ColorGameImage} />
                     <ProjectCard image={ColorGameImage} />

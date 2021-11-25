@@ -3,9 +3,14 @@ import styled from "styled-components";
 import OrchestrationContainer from "./OrchestrationContainer";
 import { motion } from "framer-motion";
 
-const cardItem = {
+const card = {
     visible: { opacity: 1, x: 0 },
     hidden: { opacity: 0, y: 0},
+};
+
+const cardItem = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: .2, y: 0},
 };
 
 const Card = styled(motion.div)`
@@ -24,13 +29,13 @@ const ProjectImage = styled(motion.img)`
     border-bottom: ${props => `1.5px solid ${props.theme.fontColor}`};
 `;
 
-const ProjectTitle = styled.div`
+const ProjectTitle = styled(motion.div)`
     font-size: ${props => props.theme.fontSize.lg};
     margin-top: 5px;
     text-align: center;
 `;
 
-const ProjectDescription = styled.div`
+const ProjectDescription = styled(motion.div)`
     font-size: ${props => props.theme.fontSize.md};
     margin-top: 5px;
     text-align: center;
@@ -38,11 +43,11 @@ const ProjectDescription = styled.div`
 
 const ProjectCard = ({image, name, description}) => {
     return(
-        <Card variants={cardItem}>
+        <Card variants={card}>
             <OrchestrationContainer>
-                <ProjectImage src={image} />
-                <ProjectTitle>{name}</ProjectTitle>
-                <ProjectDescription>{description}</ProjectDescription>
+                <ProjectImage src={image} variants={cardItem} />
+                <ProjectTitle variants={cardItem}>{name}</ProjectTitle>
+                <ProjectDescription variants={cardItem}>{description}</ProjectDescription>
             </OrchestrationContainer>
         </Card>
     );
