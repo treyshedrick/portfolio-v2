@@ -10,11 +10,11 @@ const card = {
 
 const cardItem = {
     visible: { opacity: 1, x: 0 },
-    hidden: { opacity: .2, y: 0},
+    hidden: { opacity: 0, y: 0},
 };
 
 const Card = styled(motion.div)`
-    height: 400px;
+    height: auto;
     width: 375px;
     margin: 25px 20px;
     border: ${props => `1.5px solid ${props.theme.fontColor}`};
@@ -23,7 +23,7 @@ const Card = styled(motion.div)`
 
 const ProjectImage = styled(motion.img)`
     width: 100%;
-    height: 275px;
+    height: auto;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     border-bottom: ${props => `1.5px solid ${props.theme.fontColor}`};
@@ -36,14 +36,14 @@ const ProjectTitle = styled(motion.div)`
 `;
 
 const ProjectDescription = styled(motion.div)`
-    font-size: ${props => props.theme.fontSize.md};
+    font-size: ${props => props.theme.fontSize.sm};
     margin-top: 5px;
     text-align: center;
 `;
 
 const ProjectCard = ({image, name, description}) => {
     return(
-        <Card variants={card}>
+        <Card variants={card} whileHover={{ scale: 1.075 }}>
             <OrchestrationContainer>
                 <ProjectImage src={image} variants={cardItem} />
                 <ProjectTitle variants={cardItem}>{name}</ProjectTitle>
