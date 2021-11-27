@@ -38,10 +38,10 @@ const Projects = () => {
             </HeaderBlock>
             <OrchestrationContainer>
                 <Row>
-                    <ProjectCard image={NintenLifeImage} name="Nintenlife" description={PROJECT_DESCRIPTIONS.NINTENLIFE} />
-                    <ProjectCard image={RNWebImage} name="React Native Quickstart" description={PROJECT_DESCRIPTIONS.RN_QUICKSTART}/>
-                    <ProjectCard image={BaseUIESLintImage} name="eslint-plugin-baseui-clean-overrides" description={PROJECT_DESCRIPTIONS.BASEUI_ESLINT}/>
-                    <ProjectCard image={ColorGameImage} name="Color Game" description={PROJECT_DESCRIPTIONS.COLOR_GAME} />
+                    <ProjectCard image={NintenLifeImage} name="Nintenlife" description={PROJECT_DESCRIPTIONS.NINTENLIFE} imgHeight={303.94} />
+                    <ProjectCard image={RNWebImage} name="React Native Quickstart" description={PROJECT_DESCRIPTIONS.RN_QUICKSTART} imgHeight={228.42} />
+                    <ProjectCard image={BaseUIESLintImage} name="eslint-plugin-baseui-clean-overrides" description={PROJECT_DESCRIPTIONS.BASEUI_ESLINT} imgHeight={274.91} />
+                    <ProjectCard image={ColorGameImage} name="Color Game" description={PROJECT_DESCRIPTIONS.COLOR_GAME} imgHeight={302.81} />
                 </Row>
             </OrchestrationContainer>
         </Page>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import styled from "styled-components";
 
 const list = {
     visible: {
@@ -16,15 +17,19 @@ const list = {
     },
 };
 
+const Container = styled(motion.div)`
+    height: 100%;
+`;
+
 const OrchestrationContainer = ({children}) => {
     return (
-        <motion.div
+        <Container
             initial="hidden"
             animate="visible"
             variants={list}
         >
             {children}
-        </motion.div>
+        </Container>
     );
 };
 
