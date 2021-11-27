@@ -4,7 +4,10 @@ import styled from "styled-components";
 import OrchestrationContainer from "../shared/OrchestrationContainer";
 import ProjectCard from "../shared/ProjectCard";
 import ColorGameImage from "../../assets/color-game.png";
-
+import NintenLifeImage from "../../assets/nintenlife.png";
+import RNWebImage from "../../assets/react-native-web-quickstart.png";
+import BaseUIESLintImage from "../../assets/baseui-eslint.png";
+import { PROJECT_DESCRIPTIONS } from "../app/constants";
 
 const Header = styled.div`
     font-size: ${props => props.theme.fontSize.lg};
@@ -16,7 +19,7 @@ const HeaderBlock = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px 10px;
+    margin: 20px 10px;
 `;
 
 const Row = styled.div`
@@ -35,10 +38,10 @@ const Projects = () => {
             </HeaderBlock>
             <OrchestrationContainer>
                 <Row>
-                    <ProjectCard image={ColorGameImage} name="Color Game" description="testing to see if this works" />
-                    <ProjectCard image={ColorGameImage} />
-                    <ProjectCard image={ColorGameImage} />
-                    <ProjectCard image={ColorGameImage} />
+                    <ProjectCard image={NintenLifeImage} name="Nintenlife" description={PROJECT_DESCRIPTIONS.NINTENLIFE} />
+                    <ProjectCard image={RNWebImage} name="React Native Quickstart" description={PROJECT_DESCRIPTIONS.RN_QUICKSTART}/>
+                    <ProjectCard image={BaseUIESLintImage} name="eslint-plugin-baseui-clean-overrides" description={PROJECT_DESCRIPTIONS.BASEUI_ESLINT}/>
+                    <ProjectCard image={ColorGameImage} name="Color Game" description={PROJECT_DESCRIPTIONS.COLOR_GAME} />
                 </Row>
             </OrchestrationContainer>
         </Page>

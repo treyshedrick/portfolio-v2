@@ -5,7 +5,7 @@ const list = {
         opacity: 1,
         transition: {
             when: "beforeChildren",
-            staggerChildren: 0.2,
+            staggerChildren: 0.25,
         },
     },
     hidden: {
