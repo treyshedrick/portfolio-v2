@@ -8,11 +8,10 @@ const Button = styled(motion.button)`
     margin: 0px 10px;
     background-color: ${props => props.theme.secondary}90;
     color: ${props => props.theme.inversePrimary};
-    border: 0;  
-    border-radius: 0;
+    border: 1px solid ${props => props.theme.inversePrimary};  
+    border-radius: 2rem;
     font-family: ${props => props.theme.fontFamily};
     &:hover {
-        opacity: .5;
         background-color: ${props => props.theme.inversePrimary}90;
         color: ${props => props.theme.primary};
         cursor: pointer;
@@ -21,7 +20,7 @@ const Button = styled(motion.button)`
 
 const ProjectButton = ({ label }) => {
     return (
-        <Button>{label}</Button>
+        <Button whileHover={{ scale: 1.05 }}>{label}</Button>
     );
 };
 

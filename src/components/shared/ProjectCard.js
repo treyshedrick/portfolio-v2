@@ -50,7 +50,7 @@ const ButtonRow = styled(motion.div)`
 `;
 
 const DescriptionBlock = styled(motion.div)`
-    height: calc(100% - ${props => props.imgHeight}px );
+    height: calc(100% - ${props => props.imgHeight}px);
     display: flex;
     flex-direction: column;
     justify-content: center;
