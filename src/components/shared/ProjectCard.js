@@ -15,7 +15,7 @@ const cardItem = {
 };
 
 const Card = styled(motion.div)`
-    height: auto;
+    height: 100%;
     width: 375px;
     margin: 25px 20px;
     border: ${props => `1.5px solid ${props.theme.fontColor}`};
@@ -49,27 +49,18 @@ const ButtonRow = styled(motion.div)`
     margin: 10px 0px;
 `;
 
-const DescriptionBlock = styled(motion.div)`
-    height: calc(100% - ${props => props.imgHeight}px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-`;
-
 const ProjectCard = ({image, name, description, imgHeight}) => {
     console.log(imgHeight);
     return(
         <Card variants={card} whileHover={{ scale: 1.075 }}>
             <OrchestrationContainer>
                 <ProjectImage src={image} variants={cardItem} />
-                <DescriptionBlock variants={cardItem} imgHeight={imgHeight}>
-                    <ProjectTitle variants={cardItem}>{name}</ProjectTitle>
-                    <ProjectDescription variants={cardItem}>{description}</ProjectDescription>
-                    <ButtonRow>
-                        <ProjectButton label="Demo"/>
-                        <ProjectButton label="Source Code"/>
-                    </ButtonRow>
-                </DescriptionBlock>
+                <ProjectTitle variants={cardItem}>{name}</ProjectTitle>
+                <ProjectDescription variants={cardItem}>{description}</ProjectDescription>
+                <ButtonRow>
+                    <ProjectButton label="Demo"/>
+                    <ProjectButton label="Source Code"/>
+                </ButtonRow>
             </OrchestrationContainer>
         </Card>
     );
