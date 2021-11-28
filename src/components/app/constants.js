@@ -26,3 +26,16 @@ export const PROJECT_DESCRIPTIONS = {
     BASEUI_ESLINT: "This plugin enforces users to spread the Base UI overrides prop into components, so you can focus on the logic!",
     COLOR_GAME: "A color guessing game made with Javascript! Try to beat the high score if you can!"
 };
+
+export const GITHUB_URLS = {
+    NINTENLIFE: "https://github.com/treyshedrick/nintenlife",
+    RN_QUICKSTART: "https://github.com/treyshedrick/react-native-web-quickstart",
+    BASEUI_ESLINT: "https://github.com/treyshedrick/eslint-plugin-baseui-clean-overrides",
+    COLOR_GAME: "https://github.com/treyshedrick/color-game"
+};
+
+export const DEMO_URLS = {
+    RN_QUICKSTART: "https://react-native-web-quickstart.netlify.app/",
+    BASEUI_ESLINT: "https://www.npmjs.com/package/eslint-plugin-baseui-clean-overrides",
+    COLOR_GAME: "https://tshedrick.com/color-game/colorgame.html"
+};
