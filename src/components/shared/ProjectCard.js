@@ -49,7 +49,7 @@ const ButtonRow = styled(motion.div)`
     margin: 10px 0px;
 `;
 
-const ProjectCard = ({image, name, description, imgHeight}) => {
+const ProjectCard = ({image, name, description, imgHeight, demoUrl, githubUrl}) => {
     console.log(imgHeight);
     return(
         <Card variants={card} whileHover={{ scale: 1.075 }}>
@@ -58,8 +58,8 @@ const ProjectCard = ({image, name, description, imgHeight}) => {
                 <ProjectTitle variants={cardItem}>{name}</ProjectTitle>
                 <ProjectDescription variants={cardItem}>{description}</ProjectDescription>
                 <ButtonRow>
-                    <ProjectButton label="Demo"/>
-                    <ProjectButton label="Source Code"/>
+                    {demoUrl && <ProjectButton label="Demo" url={demoUrl} />}
+                    {githubUrl && <ProjectButton label="Source Code" url={githubUrl}/>}
                 </ButtonRow>
             </OrchestrationContainer>
         </Card>

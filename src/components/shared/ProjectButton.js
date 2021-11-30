@@ -18,9 +18,14 @@ const Button = styled(motion.button)`
     }
 `;
 
-const ProjectButton = ({ label }) => {
+const ProjectButton = ({ label, url }) => {
+
+    const openUrl = () => {
+        window.open(url, "_blank");
+    };
+
     return (
-        <Button whileHover={{ scale: 1.05 }}>{label}</Button>
+        <Button whileHover={{ scale: 1.025 }} onClick={openUrl}>{label}</Button>
     );
 };
 
