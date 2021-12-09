@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { LABELS } from "../app/constants";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 const StyledAnchor = styled(motion.a)`
     display: flex;
@@ -10,8 +11,7 @@ const StyledAnchor = styled(motion.a)`
     text-decoration: none;
     color: ${props => props.theme.inversePrimary};
     &:hover {
-        opacity: .5;
-        color: ${props => props.theme.primary};
+        opacity: .8;
     }
 `;
 
@@ -26,7 +26,7 @@ const ContactButton = ({icon, text, src }) => {
 
     return (
         <StyledAnchor   
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.25 }}
             href={src}
             target={text !== LABELS.EMAIL ? "_blank" : ""}
         >
@@ -35,6 +35,12 @@ const ContactButton = ({icon, text, src }) => {
         </StyledAnchor>
     );
 
+};
+
+ContactButton.propTypes = {
+    icon: PropTypes.node,
+    text: PropTypes.string,
+    src: PropTypes.string,
 };
 
 export default ContactButton;
