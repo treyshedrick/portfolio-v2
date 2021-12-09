@@ -32,6 +32,7 @@
       "react-app/jest"
     ],
     "rules": {
+      "react/prop-types": 1,
       "arrow-spacing": [
         "error"
       ],
