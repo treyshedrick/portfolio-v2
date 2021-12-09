@@ -49,8 +49,7 @@ const ButtonRow = styled(motion.div)`
     margin: 10px 0px;
 `;
 
-const ProjectCard = ({image, name, description, imgHeight, demoUrl, githubUrl}) => {
-    console.log(imgHeight);
+const ProjectCard = ({image, name, description, demoUrl, githubUrl}) => {
     return(
         <Card variants={card} whileHover={{ scale: 1.075 }}>
             <OrchestrationContainer>
