@@ -15,6 +15,7 @@ const Section = styled(motion.div)`
     width: 100%;
     max-width: ${props => props.isSmall ? "100%" : "300px"};
     height: ${props => props.isSmall ? "150px" : "90%"};
+    max-height: ${props => props.isSmall ? null : "750px"};
     display: flex;
     flex-direction: column;
     border: 2px solid ${props => props.theme.inversePrimary};

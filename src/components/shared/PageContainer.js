@@ -11,6 +11,7 @@ const Container = styled(motion.div)`
     width: 100%;
     max-width: 1000px;
     height: ${props => props.isSmall ? "calc(100% - 165px);" : "90%"};
+    max-height: ${props => props.isSmall ? null : "750px"};
     display: flex;
     flex-direction: row;
     border-radius: 5px;

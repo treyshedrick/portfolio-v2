@@ -8,15 +8,14 @@ import Html5Devicon from 'react-devicons/html5/original-wordmark';
 import CSS3Devicon from 'react-devicons/css3/original-wordmark';
 import JavascriptDevicon from 'react-devicons/javascript/original';
 import JQueryDevicon from 'react-devicons/jquery/original-wordmark';
-import BootStrapDevicon from 'react-devicons/bootstrap/original';
+import BootStrapDevicon from 'react-devicons/bootstrap/plain-wordmark';
 import MUIDevicon from 'react-devicons/materialui/original';
-import TailWindDevicon from 'react-devicons/tailwindcss/original-wordmark';
+import TailWindDevicon from 'react-devicons/tailwindcss/plain';
 
 import NodeDevicon from 'react-devicons/nodejs/plain-wordmark';
 import ExpressDevicon from 'react-devicons/express/original-wordmark';
 import PHPDevicon from 'react-devicons/php/original';
 import PostgresDevicon from 'react-devicons/postgresql/original-wordmark';
-import MSSQLDevicon from 'react-devicons/microsoftsqlserver/plain-wordmark';
 import MYSQLDevicon from 'react-devicons/mysql/original-wordmark';
 
 import GitHubDevicon from 'react-devicons/github/original-wordmark';
@@ -59,7 +58,6 @@ export const NodeIcon = () => <StyledIcon variants={item} ><NodeDevicon size={75
 export const ExpressIcon = () => <StyledIcon variants={item} ><ExpressDevicon size={75} /></StyledIcon>;
 export const PHPIcon = () => <StyledIcon variants={item} ><PHPDevicon size={75} /></StyledIcon>;
 export const PostgresIcon = () => <StyledIcon variants={item} ><PostgresDevicon size={75} /></StyledIcon>;
-export const MSSQLIcon = () => <StyledIcon variants={item} ><MSSQLDevicon size={75} /></StyledIcon>;
 export const MYSQLIcon = () => <StyledIcon variants={item} ><MYSQLDevicon size={75} /></StyledIcon>;
 
 // tools / technologiesexport const ReactIcon = () => <StyledIcon variants={item} ><ReactDevicon size={80} /></StyledIcon>;

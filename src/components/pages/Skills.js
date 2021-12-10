@@ -61,7 +61,6 @@ const Skills = () => {
                         <Devicon.ExpressIcon />
                         <Devicon.PHPIcon />
                         <Devicon.PostgresIcon />
-                        <Devicon.MSSQLIcon />
                         <Devicon.MYSQLIcon />
                     </Row>
                 </OrchestrationContainer>
