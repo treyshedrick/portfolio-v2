@@ -6,6 +6,24 @@ import { motion } from "framer-motion";
 import { useIsSmallScreen } from "./hooks";
 import PageContainer from "../shared/PageContainer";
 
+function App() {
+    const isSmallScreen = useIsSmallScreen();
+
+    return (
+        <ThemeProvider>
+            <AppContainer
+                variants={container}
+                initial="hidden"
+                animate="show"
+                isSmall={isSmallScreen} 
+            >
+                <UserInfo />
+                <PageContainer />
+            </AppContainer>
+        </ThemeProvider>
+    );
+}
+
 const AppContainer = styled(motion.div)`
   height: 100vh;
   width: 100%;
@@ -29,24 +47,5 @@ const container = {
         }
     }
 };
-
-
-function App() {
-    const isSmallScreen = useIsSmallScreen();
-
-    return (
-        <ThemeProvider>
-            <AppContainer
-                variants={container}
-                initial="hidden"
-                animate="show"
-                isSmall={isSmallScreen} 
-            >
-                <UserInfo />
-                <PageContainer />
-            </AppContainer>
-        </ThemeProvider>
-    );
-}
 
 export default App;

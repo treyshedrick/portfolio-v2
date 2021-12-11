@@ -3,21 +3,6 @@ import ButtonRow from "../shared/ButtonRow";
 import styled from "styled-components";
 import { motion, AnimatePresence  } from "framer-motion";
 
-const RouteContainer = styled.div`
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-x: auto;
-`;
-
-
-const RoutePage = styled(motion.div)`
-    height: 100%;
-    width: 100%;
-    overflow-x: auto;
-`;
-
 const Page = ({children}) => {
     return(
         <RouteContainer>
@@ -35,5 +20,20 @@ const Page = ({children}) => {
         </RouteContainer>
     );
 };
+
+const RouteContainer = styled.div`
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+`;
+
+
+const RoutePage = styled(motion.div)`
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+`;
 
 export default Page;

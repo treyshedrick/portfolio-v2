@@ -2,6 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+const ProjectButton = ({ label, url }) => {
+
+    const openUrl = () => {
+        window.open(url, "_blank");
+    };
+
+    return (
+        <Button whileHover={{ scale: 1.025 }} onClick={openUrl}>{label}</Button>
+    );
+};
+
 const Button = styled(motion.button)`
     height: 40px;
     width: 100%;
@@ -17,16 +28,5 @@ const Button = styled(motion.button)`
         cursor: pointer;
     }
 `;
-
-const ProjectButton = ({ label, url }) => {
-
-    const openUrl = () => {
-        window.open(url, "_blank");
-    };
-
-    return (
-        <Button whileHover={{ scale: 1.025 }} onClick={openUrl}>{label}</Button>
-    );
-};
 
 export default ProjectButton;

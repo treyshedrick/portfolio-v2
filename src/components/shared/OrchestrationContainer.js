@@ -1,6 +1,18 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
+const OrchestrationContainer = ({children}) => {
+    return (
+        <Container
+            initial="hidden"
+            animate="visible"
+            variants={list}
+        >
+            {children}
+        </Container>
+    );
+};
+
 const list = {
     visible: {
         opacity: 1,
@@ -20,17 +32,5 @@ const list = {
 const Container = styled(motion.div)`
     height: 100%;
 `;
-
-const OrchestrationContainer = ({children}) => {
-    return (
-        <Container
-            initial="hidden"
-            animate="visible"
-            variants={list}
-        >
-            {children}
-        </Container>
-    );
-};
 
 export default OrchestrationContainer;

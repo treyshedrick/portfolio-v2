@@ -3,14 +3,6 @@ import PageButton from "./PageButton";
 import { ROUTES } from "../app/constants";
 import Resume from "../../assets/Resume.pdf";
 
-const Row = styled.div`
-    display: flex;
-    flex-direction: row !important;
-    height: 50px;
-    width: 100%;
-    border-bottom: 2px solid ${props => props.theme.inversePrimary};
-`;
-
 const ButtonRow = () => {
     return(
         <Row>
@@ -21,5 +13,13 @@ const ButtonRow = () => {
         </Row>
     );
 };
+
+const Row = styled.div`
+    display: flex;
+    flex-direction: row !important;
+    height: 50px;
+    width: 100%;
+    border-bottom: 2px solid ${props => props.theme.inversePrimary};
+`;
 
 export default ButtonRow;

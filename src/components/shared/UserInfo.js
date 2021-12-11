@@ -7,6 +7,39 @@ import { LINKS } from "../app/constants";
 import { LinkedInIcon, GitHubIcon, MailIcon } from "./Icons";
 import { LABELS } from "../app/constants";
 
+const UserInfo = () => {
+    const isSmallScreen = useIsSmallScreen();
+
+    return (
+        <Section
+            initial={{x: -1000, opacity: .01}}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{duration: 1}}
+            isSmall={isSmallScreen}
+        >
+            <UserImage isSmall={isSmallScreen} src={SelfIcon} />
+            <DynamicFlexBox>
+                <Column>
+                    <Name>
+                        Trey Shedrick
+                    </Name>
+                    <Header isSmall={isSmallScreen}>
+                        Software Developer {!isSmallScreen && "passionate about making web and mobile applications"}
+                    </Header>
+                    <Header isSmall={isSmallScreen}>
+                        📍  Houston, Texas
+                    </Header>
+                </Column>
+                <ContactFlexBox isSmall={isSmallScreen}>
+                    <ContactButton icon={<LinkedInIcon />} text={LABELS.LINKEDIN} src={LINKS.LINKEDIN} />
+                    <ContactButton icon={<GitHubIcon />} text={LABELS.GITHUB} src={LINKS.GITHUB}/>
+                    <ContactButton icon={<MailIcon />} text={LABELS.EMAIL} src={LINKS.EMAIL}/>
+                </ContactFlexBox>
+            </DynamicFlexBox>
+        </Section>
+    );
+};
+
 const Section = styled(motion.div)`
     display: flex;
     flex-direction: ${props => props.isSmall && "row !important"};
@@ -73,38 +106,5 @@ const ContactFlexBox = styled.div`
         margin: 20px;
   `}
 `;
-
-const UserInfo = () => {
-    const isSmallScreen = useIsSmallScreen();
-
-    return (
-        <Section
-            initial={{x: -1000, opacity: .01}}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{duration: 1}}
-            isSmall={isSmallScreen}
-        >
-            <UserImage isSmall={isSmallScreen} src={SelfIcon} />
-            <DynamicFlexBox>
-                <Column>
-                    <Name>
-                        Trey Shedrick
-                    </Name>
-                    <Header isSmall={isSmallScreen}>
-                        Software Developer {!isSmallScreen && "passionate about making web and mobile applications"}
-                    </Header>
-                    <Header isSmall={isSmallScreen}>
-                        📍  Houston, Texas
-                    </Header>
-                </Column>
-                <ContactFlexBox isSmall={isSmallScreen}>
-                    <ContactButton icon={<LinkedInIcon />} text={LABELS.LINKEDIN} src={LINKS.LINKEDIN} />
-                    <ContactButton icon={<GitHubIcon />} text={LABELS.GITHUB} src={LINKS.GITHUB}/>
-                    <ContactButton icon={<MailIcon />} text={LABELS.EMAIL} src={LINKS.EMAIL}/>
-                </ContactFlexBox>
-            </DynamicFlexBox>
-        </Section>
-    );
-};
 
 export default UserInfo;

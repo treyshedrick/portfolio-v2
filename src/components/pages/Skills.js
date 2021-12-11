@@ -4,35 +4,6 @@ import styled from "styled-components";
 import * as Devicon from "../shared/Icons";
 import OrchestrationContainer from "../shared/OrchestrationContainer";
 
-const Row = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-`;
-
-const Header = styled.div`
-    font-size: ${props => props.theme.fontSize.lg};
-    margin: ${props => props.isSmall ? "0px": "10px"};
-    border-bottom: ${props => `1.5px solid ${props.theme.fontColor}`};
-`;
-
-const SkillSetBlock = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 0px;
-`;
-
-const HeaderBlock = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 20px 10px;
-`;
-
 const Skills = () => {
     return (
         <Page>
@@ -84,5 +55,34 @@ const Skills = () => {
         </Page>
     );
 };
+
+const Row = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+`;
+
+const Header = styled.div`
+    font-size: ${props => props.theme.fontSize.lg};
+    margin: ${props => props.isSmall ? "0px": "10px"};
+    border-bottom: ${props => `1.5px solid ${props.theme.fontColor}`};
+`;
+
+const SkillSetBlock = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px;
+`;
+
+const HeaderBlock = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 10px;
+`;
 
 export default Skills;

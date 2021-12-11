@@ -4,6 +4,22 @@ import OrchestrationContainer from "./OrchestrationContainer";
 import { motion } from "framer-motion";
 import ProjectButton from "./ProjectButton";
 
+const ProjectCard = ({image, name, description, demoUrl, githubUrl}) => {
+    return(
+        <Card variants={card} whileHover={{ scale: 1.075 }}>
+            <OrchestrationContainer>
+                <ProjectImage src={image} variants={cardItem} />
+                <ProjectTitle variants={cardItem}>{name}</ProjectTitle>
+                <ProjectDescription variants={cardItem}>{description}</ProjectDescription>
+                <ButtonRow>
+                    {demoUrl && <ProjectButton label="Demo" url={demoUrl} />}
+                    {githubUrl && <ProjectButton label="Source Code" url={githubUrl}/>}
+                </ButtonRow>
+            </OrchestrationContainer>
+        </Card>
+    );
+};
+
 const card = {
     visible: { opacity: 1, x: 0 },
     hidden: { opacity: 0, y: 0},
@@ -48,21 +64,5 @@ const ButtonRow = styled(motion.div)`
     flex-direction: row;
     margin: 10px 0px;
 `;
-
-const ProjectCard = ({image, name, description, demoUrl, githubUrl}) => {
-    return(
-        <Card variants={card} whileHover={{ scale: 1.075 }}>
-            <OrchestrationContainer>
-                <ProjectImage src={image} variants={cardItem} />
-                <ProjectTitle variants={cardItem}>{name}</ProjectTitle>
-                <ProjectDescription variants={cardItem}>{description}</ProjectDescription>
-                <ButtonRow>
-                    {demoUrl && <ProjectButton label="Demo" url={demoUrl} />}
-                    {githubUrl && <ProjectButton label="Source Code" url={githubUrl}/>}
-                </ButtonRow>
-            </OrchestrationContainer>
-        </Card>
-    );
-};
 
 export default ProjectCard;

@@ -26,16 +26,6 @@ import WebpackDevicon from 'react-devicons/webpack/plain-wordmark';
 import JiraDevicon from 'react-devicons/jira/plain-wordmark';
 import VSCodeDevicon from 'react-devicons/vscode/original-wordmark';
 
-const item = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, y: 0},
-};
-
-const StyledIcon = styled(motion.span)`
-    margin: 10px;
-    display: flex;
-`;
-
 // Feather Icons
 export const LinkedInIcon = () => <Linkedin size={20} />;
 export const GitHubIcon = () => <GitHub size={20} />;
@@ -68,3 +58,13 @@ export const JestIcon = () => <StyledIcon variants={item} ><JestDevicon size={75
 export const WebpackIcon = () => <StyledIcon variants={item} ><WebpackDevicon size={75} /></StyledIcon>;
 export const JiraIcon = () => <StyledIcon variants={item} ><JiraDevicon size={75} /></StyledIcon>;
 export const VSCodeIcon = () => <StyledIcon variants={item} ><VSCodeDevicon size={75} /></StyledIcon>;
+
+const item = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, y: 0},
+};
+
+const StyledIcon = styled(motion.span)`
+    margin: 10px;
+    display: flex;
+`;
