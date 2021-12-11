@@ -14,7 +14,7 @@ const AppContainer = styled(motion.div)`
     ${props => props.theme.primary});
   display: flex;
   flex-direction: ${props => props.isSmall ? "column" : "row"};
-  padding: ${props => props.isSmall ? "10px" : "100px"};
+  padding: ${props => props.isSmall ? "10px" : "50px"};
   justify-content: center;
   align-items: center;
   overflow: hidden;

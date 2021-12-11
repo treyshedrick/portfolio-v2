@@ -20,6 +20,7 @@ const HeaderBlock = styled.div`
     flex-direction: column;
     align-items: center;
     margin: 20px 10px;
+    text-align: center;
 `;
 
 const Row = styled.div`

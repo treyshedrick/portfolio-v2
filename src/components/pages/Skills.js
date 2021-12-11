@@ -8,6 +8,7 @@ const Row = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 `;
 
 const Header = styled.div`
@@ -28,6 +29,7 @@ const HeaderBlock = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     margin: 20px 10px;
 `;
 
