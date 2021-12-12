@@ -3,6 +3,8 @@ import styled from "styled-components";
 import OrchestrationContainer from "./OrchestrationContainer";
 import { motion } from "framer-motion";
 import ProjectButton from "./ProjectButton";
+import PropTypes from "prop-types";
+
 
 const ProjectCard = ({image, name, description, demoUrl, githubUrl}) => {
     return(
@@ -18,6 +20,14 @@ const ProjectCard = ({image, name, description, demoUrl, githubUrl}) => {
             </OrchestrationContainer>
         </Card>
     );
+};
+
+ProjectCard.propTypes = {
+    image: PropTypes.string,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    demoUrl: PropTypes.string,
+    githubUrl: PropTypes.string
 };
 
 const card = {

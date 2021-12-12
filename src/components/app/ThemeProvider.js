@@ -1,6 +1,7 @@
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import React from "react";
 import { useColorScheme } from 'use-color-scheme';
+import PropTypes from "prop-types";
 
 const sharedThemeStyles = {
     fontFamily: "'Courier New', Courier, monospace",
@@ -42,6 +43,10 @@ const ThemeProvider = ({children}) => {
             {children}
         </StyledThemeProvider>
     );
+};
+
+ThemeProvider.propTypes = {
+    children: PropTypes.node
 };
 
 export default ThemeProvider;

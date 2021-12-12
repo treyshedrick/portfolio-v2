@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const OrchestrationContainer = ({children}) => {
     return (
@@ -11,6 +12,10 @@ const OrchestrationContainer = ({children}) => {
             {children}
         </Container>
     );
+};
+
+OrchestrationContainer.propTypes = {
+    children: PropTypes.node
 };
 
 const list = {

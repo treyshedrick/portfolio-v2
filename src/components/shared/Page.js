@@ -2,6 +2,7 @@ import React from "react";
 import ButtonRow from "../shared/ButtonRow";
 import styled from "styled-components";
 import { motion, AnimatePresence  } from "framer-motion";
+import PropTypes from "prop-types";
 
 const Page = ({children}) => {
     return(
@@ -19,6 +20,10 @@ const Page = ({children}) => {
             </AnimatePresence>
         </RouteContainer>
     );
+};
+
+Page.propTypes = {
+    children: PropTypes.node
 };
 
 const RouteContainer = styled.div`

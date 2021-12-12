@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const PageButton = ({children, route, isDocument, link}) => {
     if(isDocument){
@@ -15,6 +16,13 @@ const PageButton = ({children, route, isDocument, link}) => {
             <Button>{children}</Button>
         </StyledLink>
     );
+};
+
+PageButton.propTypes = {
+    children: PropTypes.node,
+    route: PropTypes.string,
+    isDocument: PropTypes.bool,
+    link: PropTypes.string,
 };
 
 const Button = styled.button`
