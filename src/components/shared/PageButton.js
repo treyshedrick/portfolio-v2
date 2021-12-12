@@ -28,7 +28,7 @@ PageButton.propTypes = {
 const Button = styled.button`
     height: 100%;
     width: 100%;
-    background-color: ${props => props.theme.secondary}90;
+    background-color: ${props => props.theme.secondary}05;
     color: ${props => props.theme.inversePrimary};
     border: 0;  
     border-radius: 0;
